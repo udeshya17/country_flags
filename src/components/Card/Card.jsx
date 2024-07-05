@@ -7,10 +7,11 @@ export const URL = "https://xcountries-backend.azurewebsites.net/all";
 export const fetchApiData = async () => {
     try {
         const response = await axios.get(URL);
-        console.log(response.data);
+        // console.log(response.data);
         return response.data;
     } catch (error) {
-        console.log(`Error fetching data: ${error}`);
+        console.error("Error fetching data: ", error);
+        return [];
     }
 }
 
